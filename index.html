@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Nova Retentores</title>
+    <meta name="description" content="Empresa especializada no fornecimento de rolamentos e soluções para transmissão de movimento. Venda de Rolamentos para empresas.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <style>
+        /* --- GERAL & RESET --- */
+:root {
+    --primary-color: #0056b3; /* Azul escuro principal */
+    --secondary-color: #007bff; /* Azul mais claro */
+    --accent-color: #ffc107; /* Amarelo/Dourado para botões e destaques */
+    --dark-bg: #1a2238; /* Fundo escuro do footer e seções */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section-subtitle {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.section-subtitle-light {
+    color: #ddd;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+.section-title-light {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn-secondary:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+
+/* --- HEADER --- */
+.top-bar {
+    background-color: #f8f9fa;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #e7e7e7;
+    display: none; /* Oculto no mobile, visível no desktop */
+}
+.top-bar-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.email-contact {
+    color: #555;
+    font-weight: 500;
+}
+.email-contact:hover {
+    color: var(--primary-color);
+}
+
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: #333;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.cta-button {
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #128C7E;
+}
+.cta-button svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    height: 600px;
+    background-image: url('https://rolimbras.com.br/wp-content/uploads/2024/11/b1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* --- ABOUT US SECTION --- */
+.about-us {
+    padding: 80px 0;
+}
+.about-us-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.about-image {
+    flex: 1;
+}
+.about-content {
+    flex: 1;
+}
+.check-list {
+    margin: 20px 0;
+}
+.check-list li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.check-list li::before {
+    content: '✔';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* --- PRODUCTS INTRO SECTION --- */
+.products-intro {
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    background-image: url('https://rolimbras.com.br/wp-content/uploads/2024/11/b3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.products-intro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 42, 92, 0.85);
+}
+.products-intro-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- PRODUCTS GRID --- */
+.products-grid {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+.product-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.product-card h3 {
+    padding: 20px 20px 10px 20px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+.product-card p {
+    padding: 0 20px 20px 20px;
+    flex-grow: 1;
+}
+.card-link {
+    display: block;
+    padding: 15px 20px;
+    background-color: #f4f4f4;
+    text-align: right;
+    font-weight: 700;
+    color: var(--primary-color);
+    transition: background-color 0.3s ease;
+}
+.card-link:hover {
+    background-color: #e9e9e9;
+}
+
+
+/* --- TESTIMONIALS SECTION --- */
+.testimonials {
+    padding: 80px 0;
+    background-color: #f0f4f8;
+    position: relative;
+}
+.testimonials-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.testimonials-image {
+    flex: 1;
+}
+.testimonials-content {
+    flex: 1;
+}
+.testimonial-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+.testimonial-quote p {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.author-info strong {
+    display: block;
+    font-size: 1.1rem;
+}
+.author-info span {
+    color: #777;
+}
+
+/* --- BRANDS SECTION --- */
+.brands {
+    padding: 60px 0;
+}
+.brands .section-title {
+    margin-bottom: 40px;
+}
+.brand-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.brand-logos img {
+    max-height: 50px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+.brand-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding-top: 60px;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+.footer-col p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+.footer-col a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+.footer-col a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+.footer-bottom {
+    border-top: 1px solid #444;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+.footer-bottom a {
+    color: #fff;
+}
+
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .section-title { font-size: 2rem; }
+    .hero h1 { font-size: 2.8rem; }
+    
+    .about-us-container, .testimonials-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .check-list li { text-align: left; }
+    .footer-container { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .top-bar { display: block; }
+    .cta-button, .nav-links { display: none; } /* Simplificação para mobile, idealmente usaria JS para um menu hamburger */
+    .main-nav { justify-content: center; }
+    .logo { margin: 0 auto; }
+
+    .hero-content { text-align: center; }
+    .hero-buttons { justify-content: center; }
+    
+    .footer-container { grid-template-columns: 1fr; }
+    .footer-col { text-align: center; }
+    .footer-col h4::after { left: 50%; transform: translateX(-50%); }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <a href="mailto:comercial@novaretentores.com.br" class="email-contact">comercial@novaretentores.com.br</a>
+                <!-- As redes sociais estavam ocultas no original, mas a estrutura está aqui caso precise -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="#" class="logo">
+                    <img src="logos/Logo Preta.png" alt="Nova Retentores Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="../Template 1 ( Nova Retentores)/html/produtos.php">Produtos</a></li>
+                </ul>
+                <a href="https://wa.me/5511998353303" target="_blank" class="cta-button">
+                    <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+                    Atendimento
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Especialistas em Rolamentos</h1>
+                <p>Especializada em fornecer uma ampla variedade de rolamentos, buchas, mancais, retentores e vedações</p>
+                <div class="hero-buttons">
+                    <a href="../Template 1 ( Nova Retentores)/html/produtos.php" class="btn btn-primary">Produtos</a>
+                    <a href="https://wa.me/5511998353303" class="btn btn-secondary">Contato</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us">
+            <div class="container about-us-container">
+                <div class="about-image">
+                    <img src="https://rolimbras.com.br/wp-content/uploads/2024/11/quem-somos.jpg" alt="Equipe Rolimbras">
+                </div>
+                <div class="about-content">
+                    <h6 class="section-subtitle">Quem somos</h6>
+                    <h2 class="section-title">Nova Retentores</h2>
+                    <p>A Nova Retentores é uma empresa especializada no fornecimento de rolamentos e soluções para transmissão de movimento, com uma longa trajetória de dedicação e inovação no mercado brasileiro. Atuamos com seriedade e compromisso, atendendo empresas de diversos setores que buscam qualidade e precisão em seus processos produtivos.</p>
+                    <p>Nossa missão é oferecer não apenas produtos de alta performance, mas também um atendimento personalizado e eficiente, sempre adaptado às necessidades específicas de cada cliente.</p>
+                    <ul class="check-list">
+                        <li>Atendimento presencial e online</li>
+                        <li>Melhor preço do mercado</li>
+                    </ul>
+                  
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Intro Section -->
+        <section class="products-intro">
+            <div class="products-intro-overlay"></div>
+            <div class="container products-intro-content">
+                <h6 class="section-subtitle-light">Produtos</h6>
+                <h2 class="section-title-light">Linha de Produtos</h2>
+                <p>Oferecemos a maior variedade de rolamentos no mercado nacional. Confira nossa linha de produtos atualizadas.</p>
+                <a href="../Template 1 ( Nova Retentores)/html/produtos.php" class="btn btn-primary">Ver todos</a>
+            </div>
+        </section>
+
+        <!-- Products Grid Section -->
+        <section class="products-grid">
+            <div class="container">
+                <div class="grid">
+                    <div class="product-card">
+                        <img src="https://rolimbras.com.br/wp-content/uploads/2024/11/Rolamentos-fixos-de-uma-carreira-de-esferas.jpg" alt="Product 1">
+                        <h3>Rolamentos fixos de uma carreira de esferas</h3>
+                        <p>Fazemos distribuição de varias marcas.</p>
+                        <a href="../Template 1 ( Nova Retentores)/html/produtos.php" class="card-link">Saiba Mais →</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://rolimbras.com.br/wp-content/uploads/2024/11/Rolamentos-de-uma-carreira-de-esferas-de-contato-regular.jpg" alt="Product 2">
+                        <h3>Rolamentos de uma carreira de esferas de contato regular</h3>
+                        <p>Fazemos distribuição de varias marcas.</p>
+                        <a href="../Template 1 ( Nova Retentores)/html/produtos.php" class="card-link">Saiba Mais →</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://rolimbras.com.br/wp-content/uploads/2024/11/Rolamentos-de-duas-carreiras-de-esferas-de-contato-regular.jpg" alt="Product 3">
+                        <h3>Rolamentos de duas carreiras de esferas de contato regular</h3>
+                        <p>Fazemos distribuição de varias marcas.</p>
+                        <a href="../Template 1 ( Nova Retentores)/html/produtos.php" class="card-link">Saiba Mais →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+             <div class="testimonials-overlay"></div>
+            <div class="container testimonials-container">
+                <div class="testimonials-image">
+                    <img src="https://rolimbras.com.br/wp-content/uploads/2024/11/destaque.jpg" alt="Destaque">
+                </div>
+                <div class="testimonials-content">
+                    <h6 class="section-subtitle">Depoimento</h6>
+                    <h2 class="section-title">O que dizem nossos clientes</h2>
+                    <p>Importamos e distribuímos os melhores produtos para todo o Brasil. Atendemos com máxima agilidade e qualidade nossos clientes.</p>
+                    
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <p>"A Nova Retentores se destaca pelo compromisso com a qualidade e pelo conhecimento técnico que compartilham conosco. Cada recomendação de produto é feita com base nas nossas necessidades específicas, o que nos ajuda a escolher sempre a melhor opção para nossos equipamentos."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://rolimbras.com.br/wp-content/uploads/2024/11/testimonial-1.png" alt="Marcos Souza">
+                            <div class="author-info">
+                                <strong>Marcos Souza</strong>
+                                <span>Empresário</span>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands Section -->
+        <section class="brands">
+            <div class="container">
+                <h6 class="section-subtitle text-center">Marcas</h6>
+                <h2 class="section-title text-center">Marcas que distribuímos</h2>
+                <div class="brand-logos">
+                    <img src="https://rolimbras.com.br/wp-content/uploads/2024/11/logo-nsk-1.jpg" alt="NSK Logo">
+                    <img src="https://rolimbras.com.br/wp-content/uploads/2024/11/logo-ntn-1.jpg" alt="NTN Logo">
+                    <img src="https://rolimbras.com.br/wp-content/uploads/2024/11/logo-skf-1.jpg" alt="SKF Logo">
+                    <img src="https://rolimbras.com.br/wp-content/uploads/2024/11/logo-timken-1.jpg" alt="Timken Logo">
+                   
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <img src="../Template 1 ( Nova Retentores)/logos/Logo Branca.png" alt="Rolimbras Logo Branco" class="footer-logo">
+                <p>A Nova Retentores é uma empresa especializada no fornecimento de rolamentos e soluções para transmissão de movimento.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="../Template 1 ( Nova Retentores)/html/produtos.php">Produtos</a></li>
+                    <li><a href="https://wa.me/5511998353303">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Produtos</h4>
+                <ul>
+                    <li><a href="../Template 1 ( Nova Retentores)/html/produtos.php"">Rolamentos de rolos cônicos</a></li>
+                    <li><a href="../Template 1 ( Nova Retentores)/html/produtos.php"">Mancais Bipartidos</a></li>
+                    <li><a href="../Template 1 ( Nova Retentores)/html/produtos.php"">Buchas de Fixação</a></li>
+                    <li><a href="../Template 1 ( Nova Retentores)/html/produtos.php"">Retentores</a></li>
+                    <li><a href="../Template 1 ( Nova Retentores)/html/produtos.php"">Correias</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>Rua Lobo de Miranda, 233<br>Vila Maria Alta - SP<br>CEP: 02129-050</p>
+                <p><a href="mailto:comercial@rolimbras.com.br">comercial@rolimbras.com.br</a></p>
+                <p><a href="tel:11998353303">(11) 99835-3303</a></p>
+                <p><a href="tel:1128420555">(11) 2842-0555</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>Copyright 2025 © Desenvolvido por Ryan Gomes (+55 11 94793-7482) </p>
+                <p>Administração aqui <a href="../Template 1 ( Nova Retentores)/php/login.php">Painel</a> </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

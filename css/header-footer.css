@@ -1,0 +1,75 @@
+/* Estilo do Header */
+header {
+  background-color: #1B1B1B;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Navegação */
+.navegation {
+  display: flex;
+  gap: 30px;
+}
+
+.navegation a {
+  text-decoration: none;
+  color: white;
+  font-size: 18pt;
+  padding: 10px;
+  transition: color 0.3s ease;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.navegation a:hover {
+  color: #28a745;
+}
+
+/* Estilo para o Footer Fixado na Parte Inferior */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.main-content {
+  padding-top: 80px; /* Espaço para o Header */
+  padding-bottom: 60px; /* Espaço para o Footer */
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #1B1B1B;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16pt;
+  font-family: 'Bebas Neue', sans-serif;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-footer p {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+}

@@ -1,0 +1,112 @@
+
+
+
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+}
+
+header {
+  background: #35424a;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #3c8dbc;
+}
+
+section {
+  padding: 20px;
+  background: #ffffff;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #35424a;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+
+nav a[href="logout.php"] {
+  background: #e74c3c; 
+}
+
+nav a[href="logout.php"]:hover {
+  background: #c0392b;
+}
+
+
+input[type="text"] {
+  border: 2px solid #3498db;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 1.8rem;
+  }
+
+  nav a {
+      padding: 10px 12px;
+      font-size: 0.8rem;
+  }
+
+  section {
+      padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  nav a {
+      width: 100%;
+      text-align: center;
+  }
+
+  section {
+      margin: 10px auto;
+      padding: 10px;
+  }
+
+  section h2 {
+      font-size: 1.3rem;
+  }
+}
